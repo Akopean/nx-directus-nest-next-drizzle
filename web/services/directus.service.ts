@@ -1,7 +1,7 @@
 export class DirectusService {
   private baseUrl: string;
 
-  constructor(baseUrl = 'http://localhost:8055') {
+  constructor(baseUrl = 'http://localhost:3030/api/directus-proxy') {
     this.baseUrl = baseUrl;
   }
 
