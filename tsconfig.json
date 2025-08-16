@@ -14,6 +14,15 @@
     },
     {
       "path": "./api"
+    },
+    {
+      "path": "./libs/db"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["web/app/*"],
+    }
+  }
 }
