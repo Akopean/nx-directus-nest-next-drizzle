@@ -1,11 +1,15 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import { DirectusService } from "@/services/directus.service";
-import { formatError } from "@/shared/utils";
-import { Page } from "@/types/page.types";
+import React, { useEffect, useState } from 'react';
+import { DirectusService } from './../../services/directus.service';
+import { formatError } from './../../shared/utils';
+import { Page } from './../../types/page.types';
 
-export default function Index({ params }: { params: Promise<{ general: string }> }) {
+export default function Index({
+  params,
+}: {
+  params: Promise<{ general: string }>;
+}) {
   const [data, setData] = useState<Page | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -26,6 +30,7 @@ export default function Index({ params }: { params: Promise<{ general: string }>
       .then((page) => setData(page))
       .catch((err) => setError(formatError(err)))
       .finally(() => setLoading(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [resolvedParams, mounted]);
 
   return (
@@ -36,7 +41,9 @@ export default function Index({ params }: { params: Promise<{ general: string }>
           {loading && <p>Завантаження...</p>}
           {error && <p>Помилка: {error}</p>}
           {data && (
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+            <>
+              <pre>{JSON.stringify(data, null, 2)}</pre>
+            </>
           )}
         </>
       ) : null}

@@ -33,7 +33,7 @@
           "watchDepsName": "watch-deps"
         }
       },
-      "exclude": ["utils/*", "libs/*"]
+      "exclude": ["utils/*", "packages/*"]
     },
     {
       "plugin": "@nx/next/plugin",
@@ -80,11 +80,22 @@
     },
     {
       "plugin": "@nx/js/typescript",
-      "include": ["utils/*", "libs/*"],
+      "include": ["utils/*", "packages/*"],
       "options": {
         "typecheck": {
           "targetName": "typecheck"
         }
+      }
+    },
+    {
+      "plugin": "@nx/react/router-plugin",
+      "options": {
+        "buildTargetName": "build",
+        "devTargetName": "dev",
+        "startTargetName": "start",
+        "watchDepsTargetName": "watch-deps",
+        "buildDepsTargetName": "build-deps",
+        "typecheckTargetName": "typecheck"
       }
     }
   ],
@@ -98,6 +109,11 @@
       "application": {
         "style": "tailwind",
         "linter": "eslint"
+      }
+    },
+    "@nx/react": {
+      "library": {
+        "unitTestRunner": "none"
       }
     }
   }

@@ -4,9 +4,6 @@
   "files": [],
   "references": [
     {
-      "path": "./web-e2e"
-    },
-    {
       "path": "./web"
     },
     {
@@ -16,13 +13,13 @@
       "path": "./api"
     },
     {
-      "path": "./libs/db"
+      "path": "./web-e2e"
+    },
+    {
+      "path": "./packages/db"
+    },
+    {
+      "path": "./packages/ui"
     }
-  ],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["web/app/*"],
-    }
-  }
+  ]
 }

@@ -17,6 +17,13 @@
     "strict": true,
     "target": "es2022",
     "types": ["node"],
-    "customConditions": ["development"]
+    "customConditions": ["development"],
+    "baseUrl": ".",
+    "paths": {
+      "@db/*": ["packages/db/src/*"],
+      "@ui": ["packages/ui/index.ts"],
+      "@ui/*": ["packages/ui/*"],
+      "@web/*": ["web/*"]
+    }
   }
 }
