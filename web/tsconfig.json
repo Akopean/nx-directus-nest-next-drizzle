@@ -18,6 +18,7 @@
         "name": "next"
       }
     ],
+
     "outDir": "dist"
   },
   "include": [
@@ -27,6 +28,9 @@
     "app/**/*.jsx",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "services/**/*",
+    "shared/**/*",
+    "types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { DirectusService } from './../../services/directus.service';
+import { DirectusService } from '@web/services/directus.service';
 import { formatError } from './../../shared/utils';
 import { Page } from './../../types/page.types';
 
