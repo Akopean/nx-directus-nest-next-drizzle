@@ -18,7 +18,6 @@
         "name": "next"
       }
     ],
-
     "outDir": "dist"
   },
   "include": [

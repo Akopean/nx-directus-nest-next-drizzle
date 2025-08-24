@@ -14,6 +14,8 @@ const config: Config = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../coverage/web',
   testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'], // додали setup файл
+  testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'], // переконуємось, що всі *.spec.tsx знаходяться
 };
 
 export default createJestConfig(config);
