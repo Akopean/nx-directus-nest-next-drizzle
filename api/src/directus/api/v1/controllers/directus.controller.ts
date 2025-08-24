@@ -9,7 +9,10 @@ export class DirectusController {
 
   @All('*')
   async proxy(@Req() req: express.Request, @Res() res: express.Response) {
-    const url = `${this.directusBaseUrl}${req.originalUrl.replace('api/directus-proxy/', '')}`;
+    const url = `${this.directusBaseUrl}${req.originalUrl.replace(
+      'api/directus-proxy/',
+      '',
+    )}`;
     const method = req.method;
     const headers = { ...req.headers };
     delete headers.host; // Не проксируємо host

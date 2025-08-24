@@ -1,3 +1,5 @@
+jest.mock('node-fetch');
+
 import { Test, TestingModule } from '@nestjs/testing';
 import { DirectusController } from './directus.controller';
 
